@@ -1,0 +1,120 @@
+:root{
+    --color1: #22254A;
+    --color2: #373B69;
+    --color3: #9A8C98;
+}
+body{
+    background-color: var(--color1);
+}
+.header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+    background-color: var(--color2);
+}
+.header h1 {
+    float: left;
+    color: var(--color3);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 2.5rem; 
+    line-height: 40px;
+    border-radius: 4px;
+}
+.header-right {
+    float: right;
+}
+.search{
+    background: transparent;
+    border-radius: 1.5rem;
+    border: 2px solid var(--color1);
+    padding: 1rem 1rem;
+    color: white;
+    font-size: 1rem;
+}
+.search:focus{
+    outline: none;
+    background-color: var(--color1);
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.movie{
+    width: 18rem;
+    margin: 1rem;
+    background-color: var(--color2 );
+    overflow: hidden;
+    border-radius: 3px;
+    position: relative;
+}
+main h3{
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .5rem;
+}
+.movie img{
+    width: 100%;
+}
+.movie-info{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem;
+    height: 4rem;
+}
+.movie-info span{
+    padding: .5rem;
+    background-color: var(--color1);
+    border-radius: 50%;
+    font-size: 1.1rem;
+}
+.movie-info span.green{
+    color: lightgreen;
+}
+.movie-info span.orange{
+    color: orange;
+}
+.movie-info span.red{
+    color: red;
+}
+.movie .overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    background-color: rgba(255, 255, 255, 0.719);
+    padding: .5rem;
+    text-align: justify;
+    transition: all 500ms;
+    transform: translateY(101%);
+}
+.movie:hover .overview{
+    transform: translateY(0);
+}
+.overview h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color1);
+}
+
+@media screen and (max-width: 500px) {
+    .header h1 {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+    
+    .header-right {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+  
